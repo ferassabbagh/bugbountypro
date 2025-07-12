@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🔓 IDOR Practice Lab</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #0f172a;
+      color: #f8fafc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+    }
+    h1 {
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    input {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      font-size: 16px;
+      width: 200px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #22c55e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .output {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 5px;
+      background-color: #1e293b;
+      width: 350px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔓 IDOR Practice Lab</h1>
+  <p>Enter a <strong>User ID</strong> (e.g., 1, 2, 3) to simulate insecure object access:</p>
+  <input id="userId" placeholder="e.g., 1" />
+  <button onclick="checkIDOR()">View Profile</button>
+  <div class="output" id="result"></div>
+
+  <script>
+    const users = {
+      1: { name: "Alice", email: "alice@example.com" },
+      2: { name: "Bob", email: "bob@example.com" },
+      3: { name: "Charlie", email: "charlie@example.com" }
+    };
+
+    function checkIDOR() {
+      const input = document.getElementById("userId").value;
+      const result = document.getElementById("result");
+      const user = users[input];
+
+      if (user) {
+        result.innerHTML = `<strong>Name:</strong> ${user.name}<br><strong>Email:</strong> ${user.email}`;
+      } else {
+        result.innerHTML = "❌ Unauthorized access or user not found!";
+      }
+    }
+  </script>
+</body>
+</html>
