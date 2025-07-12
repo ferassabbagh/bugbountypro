@@ -1,80 +1,88 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" href="style.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Courses - Bug Bounty Pro</title>
   <style>
     body {
-      background-color: #0e1624;
-      color: #fff;
+      background-color: #0f172a;
+      color: #f1f5f9;
       font-family: Arial, sans-serif;
-      padding: 40px;
+      margin: 0;
+      padding: 0;
     }
-    h1 {
+    header {
+      background-color: #1e293b;
+      padding: 20px;
       text-align: center;
-      color: #00ff7f;
     }
-    p.subtitle {
-      text-align: center;
-      color: #ccc;
-      margin-bottom: 40px;
+    header h1 {
+      margin: 0;
+      color: #22c55e;
     }
-    .course-box {
-      background-color: #1c2735;
+    .container {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .course-card {
+      background-color: #1e293b;
       padding: 20px;
       border-radius: 10px;
       margin-bottom: 20px;
-      box-shadow: 0 0 10px #00000033;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
-    .course-title {
-      font-size: 1.2em;
-      color: #00bfff;
+    .course-card h3 {
+      margin-top: 0;
+      color: #38bdf8;
     }
-    .course-description {
-      color: #ccc;
+    .course-card p {
+      color: #cbd5e1;
     }
-    .course-button {
+    .course-card a {
       display: inline-block;
       margin-top: 10px;
+      color: #0f172a;
+      background-color: #22c55e;
       padding: 10px 15px;
-      background-color: #00c853;
-      color: #fff;
       text-decoration: none;
-      border-radius: 6px;
+      border-radius: 5px;
+      font-weight: bold;
     }
-    .course-button:hover {
-      background-color: #00b347;
+    .course-card a:hover {
+      background-color: #16a34a;
     }
   </style>
 </head>
 <body>
-  <h1>Ethical Hacking Courses</h1>
-  <p class="subtitle">Step-by-step tutorials to master bug bounty hunting and vulnerability discovery.</p>
-
-  <div class="course-box">
-    <h3 class="course-title">Advanced XSS Attacks</h3>
-    <p class="course-description">Learn DOM-based, blind, and stored XSS with real-world examples and hands-on labs.</p>
-    <a href="downloads/xss-lab.html" class="course-button">View Course</a>
+  <header>
+    <h1>Ethical Hacking Courses</h1>
+    <p>Step-by-step tutorials to master bug bounty hunting and vulnerability discovery.</p>
+  </header>
+  <div class="container">
+    <div class="course-card">
+      <h3>Advanced XSS Attacks</h3>
+      <p>Learn DOM-based, blind, and stored XSS with real-world examples and hands-on labs.</p>
+      <a href="#">View Course</a>
+    </div>
+    <div class="course-card">
+      <h3>Finding IDOR in APIs</h3>
+      <p>Understand how to identify and exploit Insecure Direct Object References in modern APIs.</p>
+      <a href="#">View Course</a>
+    </div>
+    <div class="course-card">
+      <h3>Android App Pentesting 101</h3>
+      <p>Start analyzing Android apps for security flaws using Burp Suite, Frida, and more.</p>
+      <a href="#">View Course</a>
+    </div>
+    <div class="course-card">
+      <h3>Writing Effective Bug Reports</h3>
+      <p>Learn how to write professional bug reports that increase your chance of getting rewarded.</p>
+      <a href="#">View Course</a>
+    </div>
   </div>
-
-  <div class="course-box">
-    <h3 class="course-title">Finding IDOR in APIs</h3>
-    <p class="course-description">Understand how to identify and exploit Insecure Direct Object References in modern APIs.</p>
-    <a href="downloads/idor-lab.html" class="course-button">View Course</a>
-  </div>
-
-  <div class="course-box">
-    <h3 class="course-title">Android App Pentesting 101</h3>
-    <p class="course-description">Start analyzing Android apps for security flaws using Burp Suite, Frida, and more.</p>
-    <a href="#" class="course-button">View Course</a>
-  </div>
-
-  <div class="course-box">
-    <h3 class="course-title">Writing Effective Bug Reports</h3>
-    <p class="course-description">Learn how to write professional bug reports that increase your chance of getting rewarded.</p>
-    <a href="#" class="course-button">View Course</a>
-  </div>
-
 </body>
 </html>
