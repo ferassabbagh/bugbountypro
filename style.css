@@ -1,0 +1,45 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0d1117;
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding-top: 30px;
+}
+h1 {
+  color: #00ff84;
+  text-align: center;
+}
+.subtitle {
+  text-align: center;
+  color: #aaa;
+  margin-bottom: 30px;
+}
+.ask-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.ask-form input, .ask-form textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+}
+.ask-form button {
+  background-color: #00dd77;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.ask-form button:hover {
+  background-color: #00bb66;
+}
